@@ -1,0 +1,107 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reg-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 35px;
+  font-family: monospace;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+form {
+  width: 50%;
+}
+form p select {
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+}
+option {
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+}
+form p label {
+  display: block;
+}
+form p input {
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+}
+button {
+  padding: 10px;
+  min-width: 150px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: gray;
+}
+button:hover {
+  background-color: rgba(128, 128, 128, 0.74);
+}
+
+table {
+  /* background-color: aquamarine; */
+  width: 100%;
+  text-transform: uppercase;
+  /* display: flex;
+  align-items: center; */
+}
+tbody {
+  width: 100%;
+  text-transform: uppercase;
+  /* display: flex;
+  flex-direction: column; */
+  /*align-items: center; */
+  gap: 10px;
+}
+
+/* tr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+} */
+
+div {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.815);
+  color: aliceblue;
+  padding: 10px;
+  border-radius: 8px;
+}
+th {
+  background-color: gray;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+}
+td {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* border: 1px solid gray; */
+}
+td a {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.815);
+  color: aliceblue;
+  padding: 5px 10px;
+  border-radius: 8px;
+}

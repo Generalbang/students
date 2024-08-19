@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>DataBase</title>
+  </head>
+  <body>
+    <h1>Hello Everyone</h1>
+
+    <div>
+      <h2>Welcome to Student DataBase</h2>
+      <a href="{% url 'studentdetails:student_reg' %}">Add New Student</a>
+    </div>
+    <table>
+      <tr>
+        <th>parent</th>
+        <th>name</th>
+        <th>age</th>
+        <th>address</th>
+        <th>gender</th>
+        <th>nationality</th>
+        <th>parent number</th>
+        <th>hobby</th>
+      </tr>
+
+      {% for each in student %}
+      <tr>
+        <td>{{each.parent}}</td>
+        <td>{{each.name}}</td>
+        <td>{{each.age}}</td>
+        <td>{{each.address}}</td>
+        <td>{{each.gender}}</td>
+        <td>{{each.nationality}}</td>
+        <td>0{{each.parent_number}}</td>
+        <td>{{each.hobby}}</td>
+        <td>
+          <a
+            href="{% url 'studentdetails:delete' each.id %}"
+            style="display: flex; align-items: center; justify-content: center"
+          >
+            <svg
+              width="15px"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
+              <path
+                d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+              />
+            </svg>
+          </a>
+        </td>
+      </tr>
+
+      {% endfor %}
+    </table>
+    <!-- {% for each in student %}
+    <h4>{{each.name}}</h4>
+    {% endfor %} -->
+  </body>
+</html>
